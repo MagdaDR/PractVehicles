@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- mobile first -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Caveat|Open+Sans:400,700|Source+Sans+Pro:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="views/css/normalize.css">    
+    <link rel="stylesheet" href="views/css/styles.css">
+
+    <script src="models/car.js"></script>
+    <script src="models/wheel.js"></script>
+    <script src="controllers/controller.js"></script>
+
+    
+</head>
+
+<body class="container">
+    <h1>Exercici vehicles</h1>
+    <p>Typescript, javascript, html5 i CSS</p>
+   
+
+    <div class="row">                   
+        <div class="col-sm-1 "></div> 
+        <!-- ////////////////////////////////////////////////////////////// -->
+        <div class="col-sm-3 ">
+            <h4>Informació del cotxe</h4>
+            
+            <form id="CarId" action="/action_page.php"></form>
+                <div class="form-group">
+                    <label class="carText">Matrícula</label><br>
+                    <input id="plate" class="form-control" type="text" placeholder="Plate">
+                </div>
+                <div class="form-group">
+                    <label class="carText">Marca</label><br>
+                    <input id="brand" class="form-control" type="text" placeholder="Brand">
+                </div>
+                <div class="form-group">
+                    <label class="carText">Color</label><br>
+                    <input id="color" class="form-control" type="text" placeholder="color">
+                </div>
+
+            </form>
+            <!--Activar el formulari. Executa lo definit a l'action 
+            <button type="submit">Save</button>-->
+            <p id="carInfo"></p>
+            <button class="btn btn-primary" type="submit"  onclick="createCar('1212SDS','SEAT','ROJO')">Crea cotxe</button>
+        </div>                          <!--  columna CAR ------ -->
+        <!-- ////////////////////////////////////////////////////////////// -->
+
+        <div class="col-sm-1 "></div>   <!--  columna  ------ -->
+
+        <!-- ////////////////////////////////////////////////////////////// -->
+        <div class="col-sm-6 ">
+            <h4>Informació rodes</h4>                
+            <form id="wheelsId"  action="/action_page.php">
+
+                
+                    <div class="row form-group">
+                        <div class="col-sm-4 "><p>Davant 1:</p></div>
+                                                          
+                        <div class="col-sm-5 ">
+                                <label class="carText">Marca</label><br>
+                                <input class="form-control" type="text" placeholder="Plate">
+                        </div>
+                        <div class="col-sm-3 ">
+                                <label class="carText">Diametre</label><br>
+                                <input class="form-control" type="text" placeholder="Plate">
+                        </div>
+                    </div>
+                    
+                    <div class="row form-group"> 
+                        <div class="col-sm-4 "><p>Davant 2:</p></div>                               
+                        <div class="col-sm-5 ">
+                                <label class="carText">Marca</label><br>
+                                <input class="form-control" type="text" placeholder="Plate">
+                        </div>
+                        <div class="col-sm-3 ">
+                                <label class="carText">Diametre</label><br>
+                                <input class="form-control" type="text" placeholder="Plate">
+                        </div>
+                    </div>
+                    
+                    <div class="row form-group">
+                        <div class="col-sm-4 "><p>Darrera 1:</p></div>                      
+                        <div class="col-sm-5 ">
+                                <label class="carText">Marca</label><br>
+                                <input class="form-control" type="text" placeholder="Plate">
+                        </div>
+                        <div class="col-sm-3 ">
+                                <label class="carText">Diametre</label><br>
+                                <input class="form-control" type="text" placeholder="Plate">
+                        </div>
+                    </div>
+                    
+                    <div class="row form-group">
+                        <div class="col-sm-4 "><p>Darrera 2:</p></div>
+                        <div class="col-sm-5 ">
+                                <label class="carText">Marca</label><br>
+                                <input class="form-control" type="text" placeholder="Plate">
+                        </div>
+                        <div class="col-sm-3 ">
+                                <label class="carText">Diametre</label><br>
+                                <input class="form-control" type="text" placeholder="Plate">
+                        </div>
+                    </div>
+                
+                
+            </form>
+        </div>                          <!--  columna WHEELS  ------ -->
+        <!-- ////////////////////////////////////////////////////////////// -->
+
+        <div class="col-sm-1 "></div>   <!--  columna  ------ -->
+    </div>                              <!--  fila     ------------------ -->            
+
+
+</body>
+
+</html>
