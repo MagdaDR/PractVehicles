@@ -84,7 +84,7 @@ function wheelsSubmit(){
             
             break;
         }
-        //check diameter validation
+        // diameter validation
         let valDiamResult =  validarDiametreRodes(Number(wheelDiameter.value));
         if (!valDiamResult) {
             wheelValidate = false;
@@ -135,7 +135,7 @@ function validarDiametreRodes(diameterValue: number):boolean {
     }
 }
 
-// display car data input to user in a table
+
 function mostrarCotxe() {
 
     let escriureCotxe = <HTMLInputElement>document.getElementById('carInfo');

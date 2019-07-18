@@ -68,7 +68,7 @@ function wheelsSubmit() {
             errWheel.innerHTML = "no es pot deixar el camp buit";
             break;
         }
-        //check diameter validation
+        // diameter validation
         var valDiamResult = validarDiametreRodes(Number(wheelDiameter.value));
         if (!valDiamResult) {
             wheelValidate = false;
@@ -104,7 +104,6 @@ function validarDiametreRodes(diameterValue) {
         return false;
     }
 }
-// display car data input to user in a table
 function mostrarCotxe() {
     var escriureCotxe = document.getElementById('carInfo');
     escriureCotxe.innerHTML =
