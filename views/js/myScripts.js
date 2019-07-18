@@ -116,7 +116,6 @@ function mostrarCotxe() {
             " <td>" + color.value + "</td></tr></tbody>" +
             "</table>";
 }
-// display wheel data to user in a table
 function mostraRodes() {
     var mostrarInfo = "";
     var escriureRodes = document.getElementById("wheelsInfo");

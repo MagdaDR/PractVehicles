@@ -149,7 +149,7 @@ function mostrarCotxe() {
         "</table>";
 
 }
-// display wheel data to user in a table
+
 
 function mostraRodes() {
     let mostrarInfo: string = "";
