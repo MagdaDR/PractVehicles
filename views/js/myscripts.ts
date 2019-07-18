@@ -94,21 +94,13 @@ function wheelsSubmit(){
         }
 
         
-        // si tot ok carregar dades a la classe
-        if (wheelBrand.value && wheelDiameter.value && valDiamResult && wheelValidate){
 
-            
-            
-            
-            errWheel.innerHTML = ""
-            
-        }
 
     }
     
     // si tot ok carregar dades a la classe  
     if (valDiamResult && wheelValidate){ 
-        
+        errWheel.innerHTML = ""
         for (var i = 1; i <= 4; i++){
             wheelBrand    = <HTMLInputElement>document.getElementById("brand" + i +"Id");
             wheelDiameter = <HTMLInputElement>document.getElementById("wheel" + i +"Id");

@@ -75,13 +75,10 @@ function wheelsSubmit() {
             errWheel.innerHTML = "el diàmetre ha de ser entre 0.4 i 4";
             break;
         }
-        // si tot ok carregar dades a la classe
-        if (wheelBrand.value && wheelDiameter.value && valDiamResult && wheelValidate) {
-            errWheel.innerHTML = "";
-        }
     }
     // si tot ok carregar dades a la classe  
     if (valDiamResult && wheelValidate) {
+        errWheel.innerHTML = "";
         for (var i = 1; i <= 4; i++) {
             wheelBrand = document.getElementById("brand" + i + "Id");
             wheelDiameter = document.getElementById("wheel" + i + "Id");
