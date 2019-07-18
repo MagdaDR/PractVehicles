@@ -75,13 +75,13 @@ function wheelsSubmit(){
         wheelDiameter = <HTMLInputElement>document.getElementById("wheel" + i +"Id");
         //document.getElementById('wheelsId').style.display = "none";     //fer desapareixer form rodes        
         
-        //validar camps buits a les rodes
+        //validar camps buits a les rodes        
         validarRodes(wheelBrand.value, wheelDiameter.value);
         
         if (!wheelValidate) {
             wheelValidate = false;
             errWheel.innerHTML = "no es pot deixar el camp buit";
-            
+
             break;
         }
         // diameter validation
@@ -89,7 +89,7 @@ function wheelsSubmit(){
         if (!valDiamResult) {
             wheelValidate = false;
             errWheel.innerHTML = "el diàmetre ha de ser entre 0.4 i 4";
-            
+
             break;
         }
 
@@ -97,8 +97,8 @@ function wheelsSubmit(){
         // si tot ok carregar dades a la classe
         if (wheelBrand.value && wheelDiameter.value && valDiamResult && wheelValidate){
 
-            myWheel = new Wheel(Number(wheelDiameter.value), String(wheelBrand.value));  //instanciar
-            myCar.addWheel(myWheel); // afegir marca i diametre 
+            
+            
             
             errWheel.innerHTML = ""
             
@@ -106,21 +106,34 @@ function wheelsSubmit(){
 
     }
     
-    // si tot ok carregar dades a la classe   
-    document.getElementById('wheelsId').style.display = "none"; //torna invisible form Rodes 
-    mostraRodes();      // mostrar dades entrades de rodes
+    // si tot ok carregar dades a la classe  
+    if (valDiamResult && wheelValidate){ 
+        
+        for (var i = 1; i <= 4; i++){
+            wheelBrand    = <HTMLInputElement>document.getElementById("brand" + i +"Id");
+            wheelDiameter = <HTMLInputElement>document.getElementById("wheel" + i +"Id");
+            myWheel = new Wheel(Number(wheelDiameter.value), String(wheelBrand.value));  //instanciar
+            myCar.addWheel(myWheel); // afegir marca i diametre 
+        }
+        document.getElementById('wheelsId').style.display = "none"; //torna invisible form Rodes 
+        mostraRodes();      // mostrar dades entrades de rodes
+
+    
+
+    }
     
 
 }
 
 function validarRodes(wheelBrand: any, wheelDiameter: any) {
 
-    if (wheelBrand != "" && wheelDiameter != "") {
+    if ( wheelBrand != "" && wheelDiameter != ""  ) {  //&& !(/\s/.test(wheelBrand)) && !(/\s/.test(wheelDiameter)) si volem controlar espais en blanc
         errWheel.innerHTML = "";
-        
-        return wheelValidate = true;
 
-    } else {        
+        return wheelValidate = true;
+        
+    } else {
+
         errWheel.innerHTML = "no es pot deixar el camp buit";
         return wheelValidate = false;
     }
