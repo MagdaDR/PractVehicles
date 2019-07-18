@@ -7,22 +7,32 @@ html {
 *, *:before, *:after {
     box-sizing: inherit;
 }
+
 body {
    font-family: 'Open Sans', sans-serif;
-   margin: 0;
-
-   
+   margin: 0;   
 }
 
 
 
+#wheelsId {
+    display: none;
+  }
 
+
+
+#errColorId,
+#errBrandId,
+#errPlateId,
+#errWheelId {
+    font-size: 0.8em;
+}
 
 .container{
     margin-top:30px;
 }
-.carText {
 
+.carText {
     font-weight: 900;
 }
 
